@@ -7,14 +7,44 @@ export function ThemeToggle() {
 
   return (
     <Button
-      variant="ghost"
+      variant="outline"
       size="sm"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="h-9 w-9 px-0 hover:bg-accent transition-all duration-300"
+      className="h-10 w-20 px-2 relative overflow-hidden border-2 hover:scale-105 transition-all duration-300 bg-background/80 backdrop-blur-sm"
     >
-      <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
+      {/* Background slider */}
+      <div className={`absolute inset-0.5 rounded-sm transition-all duration-300 ${
+        theme === 'dark' 
+          ? 'bg-slate-800 translate-x-0' 
+          : 'bg-yellow-400 translate-x-0'
+      }`} />
+      
+      {/* Icons */}
+      <div className="relative z-10 flex items-center justify-between w-full">
+        <Sun className={`h-4 w-4 transition-all duration-300 ${
+          theme === 'light' 
+            ? 'text-slate-800 scale-110' 
+            : 'text-slate-400 scale-90'
+        }`} />
+        <Moon className={`h-4 w-4 transition-all duration-300 ${
+          theme === 'dark' 
+            ? 'text-yellow-400 scale-110' 
+            : 'text-slate-400 scale-90'
+        }`} />
+      </div>
+      
+      {/* Text indicator */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className={`text-xs font-medium transition-all duration-300 ${
+          theme === 'light' 
+            ? 'text-slate-800' 
+            : 'text-yellow-400'
+        }`}>
+          {theme === 'light' ? 'LIGHT' : 'DARK'}
+        </span>
+      </div>
+      
+      <span className="sr-only">Toggle between light and dark mode</span>
     </Button>
   )
 }
