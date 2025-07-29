@@ -37,16 +37,17 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button
                 onClick={() => scrollToSection('projects')}
+                variant="hero"
                 size="lg"
-                className="bg-white text-primary hover:bg-white/90 transition-all duration-300 font-medium"
+                className="font-medium"
               >
                 View My Work
               </Button>
               <Button
                 onClick={() => scrollToSection('contact')}
-                variant="outline"
+                variant="hero-outline"
                 size="lg"
-                className="border-white/30 text-white hover:bg-white/10 transition-all duration-300 font-medium"
+                className="font-medium"
               >
                 Get In Touch
               </Button>
