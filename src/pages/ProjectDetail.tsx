@@ -3,6 +3,7 @@ import { ArrowLeft, ExternalLink, Github, Calendar, Users, Code } from 'lucide-r
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import Navigation from '@/components/Navigation'
 
 const ProjectDetail = () => {
   const { projectId } = useParams()
@@ -120,8 +121,10 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Header */}
-      <div className="border-b border-border/50 bg-background/80 backdrop-blur-sm sticky top-0 z-10">
+      <div className="border-b border-border/50 bg-background/80 backdrop-blur-sm sticky top-16 z-10">
         <div className="container mx-auto px-6 py-4">
           <Button 
             variant="ghost" 
