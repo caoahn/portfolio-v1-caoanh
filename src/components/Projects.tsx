@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
-import { ExternalLink, Github } from 'lucide-react'
+import { ExternalLink, Github, Eye } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { useNavigate } from 'react-router-dom'
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,6 +28,7 @@ const Projects = () => {
 
   const projects = [
     {
+      id: "e-commerce-platform",
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment integration, and admin dashboard.",
       tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
@@ -34,6 +37,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=entropy&auto=format"
     },
     {
+      id: "task-management-app",
       title: "Task Management App",
       description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
       tech: ["Next.js", "Socket.io", "MongoDB", "Tailwind CSS"],
@@ -42,6 +46,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=entropy&auto=format"
     },
     {
+      id: "weather-dashboard",
       title: "Weather Dashboard",
       description: "A responsive weather application with location-based forecasts, interactive charts, and personalized weather alerts.",
       tech: ["React", "D3.js", "OpenWeather API", "PWA"],
@@ -102,6 +107,14 @@ const Projects = () => {
                 </div>
                 <div className="flex gap-3">
                   <Button
+                    onClick={() => navigate(`/project/${project.id}`)}
+                    size="sm"
+                    className="flex-1"
+                  >
+                    <Eye size={16} className="mr-2" />
+                    View Details
+                  </Button>
+                  <Button
                     asChild
                     variant="outline"
                     size="sm"
@@ -115,21 +128,6 @@ const Projects = () => {
                     >
                       <Github size={16} />
                       Code
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    size="sm"
-                    className="flex-1"
-                  >
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
                     </a>
                   </Button>
                 </div>
