@@ -124,7 +124,7 @@ const ProjectDetail = () => {
       <Navigation />
       
       {/* Header */}
-      <div className="border-b border-border/50 bg-background/80 backdrop-blur-sm sticky top-16 z-10">
+      <div className="fixed top-16 left-0 right-0 border-b border-border/50 bg-background/95 backdrop-blur-sm z-10">
         <div className="container mx-auto px-6 py-4">
           <Button 
             variant="ghost" 
@@ -137,7 +137,7 @@ const ProjectDetail = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-6 py-8 pt-32">
         {/* Hero Section */}
         <div className="mb-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
