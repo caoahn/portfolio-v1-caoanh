@@ -123,21 +123,17 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Header */}
-      <div className="fixed top-16 left-0 right-0 border-b border-border/50 bg-background/95 backdrop-blur-sm z-10">
-        <div className="container mx-auto px-6 py-4">
-          <Button 
-            variant="ghost" 
-            onClick={() => navigate('/')}
-            className="mb-4"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Projects
-          </Button>
-        </div>
-      </div>
+      {/* Back button in corner */}
+      <Button
+        onClick={() => navigate('/')}
+        variant="outline"
+        size="sm"
+        className="fixed top-20 left-6 z-20 h-10 w-10 p-0 rounded-full bg-background/95 backdrop-blur-sm border shadow-lg hover:scale-110 transition-all duration-200"
+      >
+        <ArrowLeft size={16} />
+      </Button>
 
-      <div className="container mx-auto px-6 py-8 pt-32">
+      <div className="container mx-auto px-6 py-8 pt-20">
         {/* Hero Section */}
         <div className="mb-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
