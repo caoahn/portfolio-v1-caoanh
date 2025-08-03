@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-center md:text-left">
             <p className="text-sm opacity-90">
-              © {new Date().getFullYear()} Alex Chen. All rights reserved.
+              © {new Date().getFullYear()} Cao Anh. All rights reserved.
             </p>
           </div>
           <div className="text-center md:text-right">

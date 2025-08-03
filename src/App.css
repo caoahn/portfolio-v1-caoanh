@@ -40,3 +40,29 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Scrollbar tùy chỉnh cho popup */
+.popup-scroll::-webkit-scrollbar {
+  width: 10px; /* độ rộng scrollbar */
+}
+
+.popup-scroll::-webkit-scrollbar-track {
+  background: inherit; /* lấy cùng màu với background của popup */
+  border-radius: 9999px;
+}
+
+.popup-scroll::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.5); /* xám nhạt (Tailwind slate-500/50) */
+  border-radius: 9999px;
+  border: 2px solid inherit; /* viền cùng màu popup để blend vào */
+}
+
+.popup-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.8); /* đậm hơn khi hover */
+}
+
+/* Firefox */
+.popup-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100,116,139,0.5) transparent;
+}

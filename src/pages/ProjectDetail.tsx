@@ -3,37 +3,40 @@ import { ArrowLeft, ExternalLink, Github, Calendar, Users, Code } from 'lucide-r
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import Navigation from '@/components/Navigation'
+import { useEffect } from 'react'
 
 const ProjectDetail = () => {
   const { projectId } = useParams()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const navigate = useNavigate()
 
   // Project data - in a real app, this would come from an API or database
   const projects = {
-    'e-commerce-platform': {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment integration, and admin dashboard.",
-      longDescription: "This comprehensive e-commerce platform provides a complete solution for online retail businesses. Built with modern technologies, it offers a seamless shopping experience for customers and powerful management tools for administrators. The platform includes advanced features like real-time inventory management, automated email notifications, analytics dashboard, and mobile-responsive design.",
-      tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
+    'personalwebsite': {
+      title: "Personal Website",
+      description: "A personal portfolio website built with React and Tailwind CSS.",
+      longDescription: "This personal website showcases my projects, skills, and experience. It is built with modern web technologies and follows best practices for performance and accessibility.",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       github: "https://github.com",
       live: "https://example.com",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&crop=entropy&auto=format",
-      duration: "3 months",
+      image: "../img/portfolio.png",
+      duration: "0.5 months",
       team: "Solo project",
       status: "Completed",
       features: [
-        "User authentication and authorization",
-        "Shopping cart and checkout process",
-        "Payment integration with Stripe",
-        "Admin dashboard for inventory management",
-        "Order tracking and notifications",
-        "Responsive design for all devices"
+        "Responsive design with Tailwind CSS",
+        "Dark mode support",
+        "SEO optimized",
+        "Fast loading times",
+        "Accessible navigation",
+        "Contact form with email notifications"
       ],
       challenges: [
-        "Implementing secure payment processing",
-        "Optimizing database queries for large product catalogs",
-        "Creating an intuitive admin interface"
+        "Ensuring cross-browser compatibility",
+        "Optimizing images for performance",
+        "Implementing responsive design"
       ],
       gallery: [
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=entropy&auto=format",
@@ -41,29 +44,29 @@ const ProjectDetail = () => {
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=entropy&auto=format"
       ]
     },
-    'task-management-app': {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      longDescription: "A powerful task management application designed for teams and individuals to organize their work efficiently. The app features real-time collaboration, intuitive drag-and-drop interfaces, and comprehensive project tracking capabilities.",
-      tech: ["Next.js", "Socket.io", "MongoDB", "Tailwind CSS"],
+    'WebShopShoe': {
+      title: "Web Shop Shoe",
+      description: "An e-commerce platform for selling shoes online, featuring user authentication, product listings, and a shopping cart.",
+      longDescription: "This e-commerce platform provides a complete solution for online shoe retail. Built with modern technologies, it offers a seamless shopping experience for customers and powerful management tools for administrators.",
+      tech: ["React", "MongoDB", "Tailwind CSS"],
       github: "https://github.com",
       live: "https://example.com",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop&crop=entropy&auto=format",
+      image: "../img/image1.png",
       duration: "2 months",
       team: "3 developers",
       status: "Completed",
       features: [
-        "Real-time collaboration with Socket.io",
-        "Drag-and-drop task management",
-        "Team member assignments",
-        "Progress tracking and analytics",
-        "File attachments and comments",
-        "Mobile-responsive interface"
+        "User authentication and authorization",
+        "Product listings and filtering",
+        "Shopping cart and checkout process",
+        "Payment integration with Stripe",
+        "Admin dashboard for inventory management",
+        "Order tracking and notifications"
       ],
       challenges: [
-        "Implementing real-time synchronization",
-        "Optimizing drag-and-drop performance",
-        "Managing complex state in collaborative environment"
+        "Implementing secure user authentication",
+        "Optimizing product search and filtering",
+        "Ensuring responsive design across devices"
       ],
       gallery: [
         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=entropy&auto=format",
@@ -71,29 +74,29 @@ const ProjectDetail = () => {
         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=entropy&auto=format"
       ]
     },
-    'weather-dashboard': {
-      title: "Weather Dashboard",
-      description: "A responsive weather application with location-based forecasts, interactive charts, and personalized weather alerts.",
-      longDescription: "An advanced weather dashboard that provides comprehensive weather information with beautiful visualizations. The application features location-based forecasts, interactive charts, and personalized weather alerts to keep users informed about weather conditions.",
-      tech: ["React", "D3.js", "OpenWeather API", "PWA"],
+    'webshopshoeadmin': {
+      title: "Web Shop Shoe Admin",
+      description: "An admin dashboard for managing the Web Shop Shoe e-commerce platform, featuring user management, order tracking, and inventory control.",
+      longDescription: "This admin dashboard provides a comprehensive solution for managing the Web Shop Shoe e-commerce platform. Built with modern technologies, it offers powerful tools for user management, order tracking, and inventory control.",
+      tech: ["React", "Redux", "Tailwind CSS"],
       github: "https://github.com",
       live: "https://example.com",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop&crop=entropy&auto=format",
-      duration: "1 month",
+      image: "../img/image4.png",
+      duration: "2 month",
       team: "Solo project",
       status: "Completed",
       features: [
-        "Location-based weather forecasts",
-        "Interactive charts with D3.js",
-        "Personalized weather alerts",
-        "Progressive Web App capabilities",
-        "Offline functionality",
-        "Multi-location tracking"
+        "User management with role-based access control",
+        "Order tracking and management",
+        "Inventory control and product management",
+        "Sales analytics and reporting",
+        "Responsive design for mobile and desktop",
+        "Real-time notifications for order updates"
       ],
       challenges: [
-        "Creating responsive data visualizations",
-        "Implementing offline functionality",
-        "Optimizing API calls for performance"
+        "Implementing role-based access control",
+        "Ensuring data integrity and security",
+        "Optimizing performance for large datasets"
       ],
       gallery: [
         "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop&crop=entropy&auto=format",
@@ -121,19 +124,21 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
-      
-      {/* Back button in corner */}
-      <Button
-        onClick={() => navigate('/')}
-        variant="outline"
-        size="sm"
-        className="fixed top-20 left-6 z-20 h-10 w-10 p-0 rounded-full bg-background/95 backdrop-blur-sm border shadow-lg hover:scale-110 transition-all duration-200"
-      >
-        <ArrowLeft size={16} />
-      </Button>
+      {/* Header */}
+      <div className="border-b border-border/50 bg-background/80 backdrop-blur-sm sticky top-0 z-10">
+        <div className="container mx-auto px-6 py-4">
+          <Button
+            variant="ghost"
+            onClick={() => navigate('/')}
+            className="mb-4"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Projects
+          </Button>
+        </div>
+      </div>
 
-      <div className="container mx-auto px-6 py-8 pt-20">
+      <div className="container mx-auto px-6 py-8">
         {/* Hero Section */}
         <div className="mb-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -258,7 +263,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Gallery */}
-        <Card>
+        {/* <Card>
           <CardContent className="p-8">
             <h2 className="text-2xl font-bold mb-6">Project Gallery</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -273,7 +278,7 @@ const ProjectDetail = () => {
               ))}
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </div>
   )
