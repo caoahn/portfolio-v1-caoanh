@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Mail, Github, Linkedin, Twitter, Send } from 'lucide-react'
+import { Mail, Github, Linkedin, Twitter, Send, Facebook } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -44,15 +44,15 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000))
-    
+
     toast({
       title: "Message sent!",
       description: "Thank you for your message. I'll get back to you soon.",
     })
-    
+
     setFormData({ name: '', email: '', message: '' })
     setIsSubmitting(false)
   }
@@ -61,25 +61,25 @@ const Contact = () => {
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:hello@alexchen.dev',
+      href: 'mailto:caotanh04@gmail.com',
       color: 'hover:text-red-500'
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com',
+      href: 'https://github.com/caoahn',
       color: 'hover:text-gray-800 dark:hover:text-gray-200'
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/tuan-anh-cao-bb920932b/',
       color: 'hover:text-blue-600'
     },
     {
-      name: 'Twitter',
-      icon: Twitter,
-      href: 'https://twitter.com',
+      name: 'Facebook',
+      icon: Facebook,
+      href: 'https://facebook.com',
       color: 'hover:text-blue-400'
     }
   ]
@@ -87,9 +87,8 @@ const Contact = () => {
   return (
     <section id="contact" ref={sectionRef} className="section-padding section-background">
       <div className="section-container">
-        <div className={`text-center mb-16 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-foreground">
             Let's Work Together
           </h2>
@@ -100,9 +99,8 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Form */}
-          <Card className={`border-border/50 transition-all duration-1000 delay-200 ${
-            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-          }`}>
+          <Card className={`border-border/50 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
+            }`}>
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold mb-6 text-foreground">
                 Send me a message
@@ -159,16 +157,15 @@ const Contact = () => {
           </Card>
 
           {/* Contact Info */}
-          <div className={`space-y-8 transition-all duration-1000 delay-400 ${
-            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-          }`}>
+          <div className={`space-y-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+            }`}>
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-foreground">
                 Get in touch
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                I'm always interested in new opportunities and collaborations. 
-                Whether you have a project in mind, want to discuss tech, or just 
+                I'm always interested in new opportunities and collaborations.
+                Whether you have a project in mind, want to discuss tech, or just
                 want to connect, feel free to reach out!
               </p>
             </div>
@@ -184,11 +181,10 @@ const Contact = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`skill-card p-4 rounded-lg flex items-center gap-3 text-muted-foreground transition-all duration-300 ${link.color} ${
-                      isVisible 
-                        ? 'opacity-100 translate-y-0' 
-                        : 'opacity-0 translate-y-4'
-                    }`}
+                    className={`skill-card p-4 rounded-lg flex items-center gap-3 text-muted-foreground transition-all duration-300 ${link.color} ${isVisible
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-4'
+                      }`}
                     style={{ transitionDelay: `${600 + index * 100}ms` }}
                   >
                     <link.icon className="w-5 h-5" />
@@ -204,7 +200,7 @@ const Contact = () => {
                   Quick Response
                 </h4>
                 <p className="text-sm text-muted-foreground">
-                  I typically respond to emails within 24 hours. For urgent 
+                  I typically respond to emails within 24 hours. For urgent
                   matters, feel free to reach out on LinkedIn.
                 </p>
               </CardContent>
