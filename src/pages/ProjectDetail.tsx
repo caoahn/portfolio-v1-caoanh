@@ -103,6 +103,68 @@ const ProjectDetail = () => {
         "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop&crop=entropy&auto=format",
         "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop&crop=entropy&auto=format"
       ]
+    },
+    'homepage': {
+      title: "Home Page",
+      description: "The main landing page for the e-commerce platform, featuring a product showcase and user authentication.",
+      longDescription: "This home page serves as the gateway to the e-commerce platform, providing users with an intuitive interface to browse products, access their accounts, and manage their shopping carts.",
+      tech: ["React", "MongoDB", "Tailwind CSS", "Tanstack", "ASP.NET"],
+      github: "https://github.com",
+      live: "https://example.com",
+      image: "../img/sc1.png",
+      duration: "3 months",
+      team: "4 developers",
+      status: "Completed",
+      features: [
+        "User-friendly product browsing",
+        "Seamless account management",
+        "Efficient shopping cart functionality",
+        "Responsive design for mobile and desktop",
+        "Integration with third-party APIs",
+        "Performance optimization for fast loading times"
+      ],
+      challenges: [
+        "Implementing secure user authentication",
+        "Optimizing product search and filtering",
+        "Ensuring responsive design across devices"
+      ],
+      gallery: [
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=entropy&auto=format",
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=entropy&auto=format",
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=entropy&auto=format"
+      ]
+    },
+    'cmshomepage':
+    {
+      title: "CMS HomePage",
+      description: "The main landing page for the CMS platform, featuring a user-friendly interface and content management tools.",
+      longDescription: "This home page serves as the gateway to the CMS platform, providing users with an intuitive interface to manage content, access their accounts, and utilize various CMS features.",
+      tech: ["React", "MongoDB", "Tailwind CSS", "TypeScript", "Tanstack", "ASP.NET"],
+      github: "https://github.com",
+      live: "https://example.com",
+      image: "../img/sc2.png",
+      duration: "3 months",
+      team: "4 developers",
+      status: "Completed",
+      features: [
+        "User-friendly product browsing",
+        "Seamless account management",
+        "Efficient shopping cart functionality",
+        "Responsive design for mobile and desktop",
+        "Integration with third-party APIs",
+        "Performance optimization for fast loading times",
+        "User-friendly content management tools",
+      ],
+      challenges: [
+        "Implementing secure user authentication",
+        "Optimizing product search and filtering",
+        "Ensuring responsive design across devices"
+      ],
+      gallery: [
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=entropy&auto=format",
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=entropy&auto=format",
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&crop=entropy&auto=format"
+      ]
     }
   }
 

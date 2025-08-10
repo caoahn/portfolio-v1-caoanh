@@ -59,14 +59,14 @@ const Skills = () => {
   ]
 
   const tools = [
-    { name: 'Git', level: 'Senior', icon: <FaGitAlt className="w-8 h-8 text-orange-600" /> },
-    { name: 'Docker', level: 'Middle', icon: <FaDocker className="w-8 h-8 text-sky-500" /> },
-    { name: 'Figma', level: 'Middle', icon: <SiFigma className="w-8 h-8 text-pink-600" /> },
-    { name: 'Postman', level: 'Senior', icon: <SiPostman className="w-8 h-8 text-orange-500" /> },
-    { name: 'My Sql', level: 'Middle', icon: <SiMysql className="w-8 h-8 text-orange-600" /> },
-    { name: 'MongoDB', level: 'Middle', icon: <SiMongodb className="w-8 h-8 text-green-600" /> },
-    { name: 'Github', level: 'Senior', icon: <FaGithub className="w-8 h-8 text-black-700" /> },
-    { name: 'Gitlab', level: 'Middle', icon: <FaGitlab className="w-8 h-8 tex-black" /> },
+    { name: 'Git', icon: <FaGitAlt className="w-8 h-8 text-orange-600" /> },
+    { name: 'Docker', icon: <FaDocker className="w-8 h-8 text-sky-500" /> },
+    { name: 'Figma', icon: <SiFigma className="w-8 h-8 text-pink-600" /> },
+    { name: 'Postman', icon: <SiPostman className="w-8 h-8 text-orange-500" /> },
+    { name: 'My Sql', icon: <SiMysql className="w-8 h-8 text-orange-600" /> },
+    { name: 'MongoDB', icon: <SiMongodb className="w-8 h-8 text-green-600" /> },
+    { name: 'Github', icon: <FaGithub className="w-8 h-8 text-black-700" /> },
+    { name: 'Gitlab', icon: <FaGitlab className="w-8 h-8 tex-black" /> },
   ]
 
   const getLevelColor = (level: string) => {

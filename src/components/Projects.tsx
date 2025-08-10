@@ -53,6 +53,24 @@ const Projects = () => {
       github: "https://github.com",
       live: "https://example.com",
       image: "./img/image4.png"
+    },
+    {
+      id: "homepage",
+      title: "Home Page",
+      description: "The main landing page for the e-commerce platform, featuring a product showcase and user authentication.",
+      tech: ["React", "Tailwind CSS", ".NET 8"],
+      github: "https://github.com",
+      live: "https://example.com",
+      image: "./img/sc1.png"
+    },
+    {
+      id: "cmshomepage",
+      title: "CMS Home Page",
+      description: "The main landing page for the CMS platform, featuring a user-friendly interface and content management tools.",
+      tech: ["React", "Tailwind CSS", ".NET 8", "TypeScript", "Tanstack"],
+      github: "https://github.com",
+      live: "https://example.com",
+      image: "./img/sc2.png"
     }
   ]
 
